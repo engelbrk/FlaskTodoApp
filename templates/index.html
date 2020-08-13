@@ -1,46 +1,23 @@
 <html>
   <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Todo App</title>
-    <style>
-      .hidden {
-        display: none;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        width: 200px;
-      }
-      li {
-          margin: 10px 0;
-          }
-      .delete-button {
-          box-shadow: 0px 10px 14px -7px #732727;
-          background-color:deeppink;
-          border-radius:4px;
-          border:1px solid deeppink;
-          display:inline-block;
-          cursor:pointer;
-          color:#ffffff;
-          font-family:Arial;
-          font-size:13px;
-          font-weight:bold;
-          padding:6px 12px;
-          text-decoration:none;
-          text-shadow:0px 1px 0px #5b8a3c;
-        }
-        .delete-button:hover {
-            background:linear-gradient(to bottom, #ffffff 5%, #b35959 100%);
-            background-color:#ffffff;
-        }
-        .delete:active {
-            position:relative;
-            top:1px;
-}
-    </style>
   </head>
   <body>
+    <form>
+      <h1>TodoApp</h1>
+      <h2>Create list</h2>
+      <input type="text" />
+      <input type="submit" value="Create" />
+    </form>
+    <ul id="lists">
+      <li>
+        Mockup list name
+        <input class="delete-list-button" type="button" value="&cross;"/>
+      </li>
+    </ul>
     <form id="form" method="post" action="/todos/create">
+      <h2>Create todo</h2>
       <input type="text" id="description" name="description" />
       <input type="submit" value="Create" />
     </form>
@@ -60,8 +37,6 @@
           deleteButton = deleteButtons[i];
           deleteButton.onclick = function(e) {
               newDeleted = e.target.dataset['id'];
-              console.log('event', e);
-              console.log(newDeleted);
               fetch('/todos/' + newDeleted + '/deleted', {
                   method: 'POST',
                   body: JSON.stringify({

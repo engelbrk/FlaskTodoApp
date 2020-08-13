@@ -1,0 +1,51 @@
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.delete-button {
+    box-shadow: 0px 10px 14px -7px #732727;
+    background-color:deeppink;
+    border-radius:4px;
+    border:1px solid deeppink;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    padding:6px 12px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #5b8a3c;
+}
+
+.delete-button:hover {
+    background:linear-gradient(to bottom, #ffffff 5%, #b35959 100%);
+    background-color:#ffffff;
+}
+
+.delete:active {
+    position:relative;
+    top:1px;
+
+}
+
+body {
+    background:linear-gradient(to bottom, #ffffff 5%, deeppink 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    }
