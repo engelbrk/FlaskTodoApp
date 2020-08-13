@@ -41,7 +41,7 @@ li {
 }
 
 body {
-    background:linear-gradient(to bottom, #ffffff 5%, deeppink 100%);
+    background-image: url('bg.jpg');
     display: flex;
     flex-direction: column;
     justify-content: center;
