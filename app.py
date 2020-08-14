@@ -25,9 +25,6 @@ class TodoList(db.Model):
   def __repr__(self):
     return f'<Todo {self.id} {self.description}>'
 
-# note: more conventionally, we would write a
-# POST endpoint to /todos for the create endpoint:
-# @app.route('/todos', method=['POST'])
 @app.route('/todos/create', methods=['POST'])
 def create_todo():
   error = False
