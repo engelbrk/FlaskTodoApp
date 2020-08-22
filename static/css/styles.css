@@ -34,9 +34,32 @@ li {
     background-color:#ffffff;
 }
 
+.delete-list-button {
+    box-shadow: 0px 10px 14px -7px #732727;
+    background-color: #fad338;
+    border-radius:4px;
+    border:2px solid black;
+    display:inline-block;
+    cursor:pointer;
+    color:black;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    padding:6px 12px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #5b8a3c;
+}
+
+.delete-list-button:hover {
+    background:linear-gradient(to bottom, #ffffff 5%, #b35959 100%);
+    background-color:#ffffff;
+}
+
 .delete:active {
     position:relative;
     top:1px;
+
+
 
 }
 
