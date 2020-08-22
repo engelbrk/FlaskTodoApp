@@ -11,10 +11,12 @@
       <input type="submit" value="Create" />
     </form>
     <ul id="lists">
+      {% for list in lists %}
       <li>
-        Mockup list name
+        {{ list.name }}
         <input class="delete-list-button" type="button" value="&cross;"/>
       </li>
+      {% endfor %}
     </ul>
     <form id="form" method="post" action="/todos/create">
       <h2>Create todo</h2>
@@ -31,8 +33,6 @@
       </li>
       {% endfor %}
     </ul>
-
     <script src="{{ url_for('static', filename='JS/main.js') }}"></script>
-    
   </body>
 </html>
